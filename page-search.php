@@ -37,7 +37,14 @@
 
                     <div class="search-result">
                         <div class="result-info">
-                            <h2><a href="<?php the_permalink(); ?>"><?php str_replace(ucfirst(the_title()), '-', ' '); ?></a></h2>
+							<?php $post_title = get_the_title();
+								$stripped_title = str_replace('-', ' ', $post_title);
+								$formatted_title = ucwords($stripped_title);
+							?>
+
+							<?php echo $formatted_title; ?>
+
+                            <h2><a href="<?php the_permalink(); ?>"><?php echo $formatted_title; ?></a></h2>
                             <?php if( get_field('description') ): ?>
                                 <?php
                                     $length = 15;
@@ -74,7 +81,7 @@
 
             <?php else : ?>
                 <div class="single-post">
-                    <p><?php _e( 'No services matching your query' ); ?></p>
+                    <p><?php _e( 'No results match your query' ); ?></p>
                 </div>
             <?php endif; ?>
         </div>

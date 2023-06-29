@@ -66,8 +66,6 @@
 
                 $custom_query = new WP_Query( $args );
 
-                echo array_values($args);
-
                 if ( $custom_query->have_posts() ) {
                     ?><h3 style="text-align: left; color: rgb(85,85,85)"><?php echo $year;?></h3>
                     <figure class="year-container">
@@ -78,7 +76,7 @@
                                 if( $image ) {
                                     echo "<figure class='gallery-image'>";
                                         echo '<img src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '">';
-                                        echo '<figcaption class="gallery-image-caption">' . get_field('caption') . '</p>';
+                                        echo '<figcaption class="gallery-image-caption" aria-hidden="true">' . get_field('caption') . '</p>';
                                     echo "</figure>";
                                 }
                             }

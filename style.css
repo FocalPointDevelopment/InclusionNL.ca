@@ -89,9 +89,21 @@ html {
   padding-right: 10%;
 }
 
+#search-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #search{
   font-size: 1.5em;
   margin: 1em 0;
+}
+
+#search-button{
+  width: 2.5em;
+  height: 2.5em;
 }
 
 #header-content{
@@ -637,7 +649,7 @@ footer{
 
 .footer-area > div > *{
   font-size: 1em;
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
 }
 
 .footer-area{
@@ -700,17 +712,17 @@ footer{
 .right-col > ul > li > a:focus{
   width: 100%;
   display: inline-block;
-  color: rgba(255,255,255,0.6);
-  border-bottom: 1px solid rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
+  border-bottom: 1px solid rgb(255,255,255);
 }
 
 .right-col > ul > li > a{
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,2551);
   text-decoration: none;
 }
 
 .center-col > p > a{
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
   text-decoration: none;
 }
 
@@ -729,19 +741,19 @@ footer{
 }
 
 .bottom > ul > li > a{  
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
   text-decoration: none;
 }
 
 .bottom > ul > li > a:hover,
 .bottom > ul > li > a:focus{
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
   text-decoration: underline;
 }
 
 .copyright{
   text-align: center;
-  color: rgba(255,255,255,0.6);
+  color: rgb(255,255,255);
   font-size: 1em;
 }
 
@@ -832,7 +844,7 @@ footer{
  .quotebox-credit{
     justify-content: center;
     align-items: center;
-    min-width: 95%;
+    width: 98.75%;
     margin-left: 1.25%;
   }
 

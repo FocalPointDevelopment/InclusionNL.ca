@@ -69,7 +69,7 @@
                                 if( $image ) {
                                     echo "<figure class='gallery-image'>";
                                         echo '<img src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '">';
-                                        echo '<figcaption class="gallery-image-caption">' . get_field('caption') . '</p>';
+                                        echo '<figcaption class="gallery-image-caption" aria-hidden="true">' . get_field('caption') . '</p>';
                                     echo "</figure>";
                                 }
                             }

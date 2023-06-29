@@ -117,9 +117,9 @@
     <header>
         <a href="#content" class="accessibility-content-skip">Skip to main content</a>  
         <div id="header-black-bar">
-            <form role="search" action="/search/" method="GET">
+            <form role="search" action="/search/" id="search-form" method="GET">
                 <input type="text" name="search_query" id="search" placeholder="Search" />
-                <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+                <button type="submit" id="search-button" aria-label="search button"><i class="fa fa-search"></i></button>
             </form>
             
             <ul class="social-links" style="width: max(200px, 30%)">
