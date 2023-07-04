@@ -3,7 +3,7 @@
     <head>
     <style>
             /*---------------------------------------------------
-            HEADER /NAVIGATION
+            HEADER NAVIGATION
             -----------------------------------------------------*/
             @media (min-width: 800px) {
                 .nav-toggle{
@@ -52,9 +52,13 @@
                 .nav-toggle{
                     display: block;
                     text-align: center;
-                    /* background-color: orange; */
                     padding: 5px;
                     padding-top: 8px;
+                    width: 60vw;
+                    margin: 5px;
+                    border: 1px solid #bbb;
+                    -webkit-box-shadow: 5px 10px 15px 0px rgba(0,0,0,0.28); 
+                    box-shadow: 5px 10px 15px 0px rgba(0,0,0,0.28);
                 }
                 
                 .nav-toggle > a{
@@ -67,20 +71,12 @@
                     margin: 0;
                     padding: 0;
                     overflow: hidden;
-                    background-color: #333;
+                    /* background-color: #333; */
                 }
-
-                /* .nav > li {
-                    border-right:1px solid #bbb;
-                }
-
-                .nav > li:last-child {
-                    border-right: none;
-                } */
 
                 .nav > li a {
                     display: block;
-                    color: #33333333;
+                    color: #000;
                     text-align: center;
                     padding: 14px 16px;
                     text-decoration: none;
@@ -90,8 +86,9 @@
                     background-color: none;
                 }
 
-                .nav > .active {
-                    background-color: none;
+                .nav > .active > a{
+                    color: #5b1300;
+                    text-decoration: underline;
                 }
             }
             /*---------------------------------------------------
@@ -122,7 +119,7 @@
                 <button type="submit" id="search-button" aria-label="search button"><i class="fa fa-search"></i></button>
             </form>
             
-            <ul class="social-links" style="width: max(200px, 30%)">
+            <ul class="social-links">
                 <li><a href="https://www.facebook.com/InclusionNL/" aria-label="Facebook link"><i class="fa fa-facebook-f"></i></a></li>
                 <li><a href="https://www.instagram.com/inclusionnl/" aria-label="Instagram link"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/InclusionNL" aria-label="Twitter link"><i class="fa fa-twitter"></i></a></li>

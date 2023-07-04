@@ -213,7 +213,7 @@ p, figcaption{
   border: 2px solid rgba(52,52,52,0.42) !important;
   text-align: center; 
   padding-right: 1em;
-  margin: -3.5em auto 0 auto;
+  margin: -5.5em auto 0 auto;
   padding: auto auto;
   display: flex;
   flex-direction: row;
@@ -639,6 +639,10 @@ p, figcaption{
   color: white;
 }
 
+.EARN-NL-banner > div > img {
+  max-width: 90%;
+}
+
 /* Footer */
 
 footer{
@@ -686,6 +690,7 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: max(200px, 30%);
 }
 
 .right-col{
@@ -780,6 +785,15 @@ footer{
     flex-direction: column;
   }
 
+  #header-content{
+    flex-direction: column-reverse;
+  }
+
+  .social-links{
+    width: 90%;
+    justify-content: space-between;
+  }
+
   .small-body{
     width: 95vw;
     padding-left: 2.5vw;
@@ -850,6 +864,21 @@ footer{
 
   .contact-container{
     flex-direction: column;
+  }
+
+
+  .service-cards{
+    flex-direction: column;
+  }
+
+  .service-card{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2em;
+  }
+
+  .gallery-image{
+    width: 100%;
   }
   
   .footer-area{

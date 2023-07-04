@@ -62,7 +62,6 @@
 
                 </div>
                 <div class="contact-form">
-                    <!--  make a contact form that gets sent to "manager@inclusionnl.ca" with the first name, last name, email, and Your Message, along with a title that says "How can we help you?"-->
                     <h2>How can we help you?</h2>
                     <form method="post">
                         <label><strong>Name</strong></label>
@@ -82,11 +81,12 @@
                         <label for="message"><strong>Your Message</strong></label>
                         <textarea id="message" name="message" required></textarea>
 
-                        <input id="submit" type="submit" value="Submit">
+                        <input id="submit" name="submit" type="submit" value="Submit">
                     </form>
                     <!-- Form send logic -->
                     <?php
-                        if(isset($_POST['submit'])){
+                    echo "<p>Submit value: " . $_POST['submit'] . "</p>";
+                        if($_POST['submit'] == "Submit"){
                             $valid_submission = true;
 
                             $fname = $_POST['firstname'];
@@ -100,14 +100,17 @@
                             "Here is the message:\n $message".
                             "You can contact $fname $lname via email at $email";
 
-                            $headers = 'From: '. 'jim@empowernl.ca' . "\r\n" .
-                            'Reply-To: ' .'jim@empowernl.ca' . "\r\n";
+                            $headers = 'From: '. 'website@inclusionnl.ca' . "\r\n" .
+                            'Reply-To: ' .'website@inclusionnl.ca' . "\r\n";
 
-                            if(mail($to, $subject, $body, $headers)){
+                            if(wp_mail($to, $subject, $body, $headers)){
                                 echo "<p>Thank you for your submission!</p>";
                             } else {
                                 echo "<p>Something went wrong. Please try again.</p>";
                             }
+
+                            // Reset submit value to avoid auto-submission on referesh
+                            $_POST['submit'] = "";
                         }
 
                     ?>
