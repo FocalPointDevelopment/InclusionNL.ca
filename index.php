@@ -44,11 +44,10 @@
                         <div class="fp-row-content">
                             <h2>Join the inclusive employment movement!</h2>
                             <p>22% of the Canadian population (15 years and older) self-identify as having a disability and experience barriers in their workplace and community.*  In Newfoundland and Labrador, this represents close to <strong>114,500 individuals</strong> in our province – a significant employee talent pool and market potential that is largely untapped!</p>
-                            <p style="font-size: 14px;"><i>* According to the Statistics Canada, Canadian Survey of Disability, conducted in 2017<i></p>
+                            <p style="font-size: 14px;"><i>* According to the Statistics Canada, Canadian Survey of Disability, conducted in 2017</i></p>
                         </div>
                     </div>
-
-                    <!-- Querry the custom post type 'partner feedback' for the post with the 'focused_pages' field equals 'home' -->
+                    
                     <?php
                         $args = array(
                             'post_type' => 'Partner Feedback',
